@@ -1,0 +1,144 @@
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode h2{
+    color: white;
+}
+.dark-mode ul{
+    color: black;
+}
+
+
+/* Adjustments for other elements */
+.dark-mode .header-menu .dropdown-content {
+    background-color: #2c2c2c;
+    border-color: #444;
+}
+
+.dark-mode .dropdown-content a {
+    color: #ffffff;
+}
+
+.dark-mode .dropdown-content a:hover {
+    background-color: #3a3a3a;
+}
+
+.dark-mode .slider-container {
+    background-color: #1f1f1f;
+}
+
+.dark-mode .see-more {
+    background-color: #007bff;
+}
+
+.dark-mode .see-more:hover {
+    background-color: #0056b3;
+}
+
+.dark-mode #back-to-top {
+    background-color: #007bff;
+}
+
+.dark-mode #back-to-top:hover {
+    background-color: #0056b3;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.theme-toggle:focus {
+    outline: none;
+}
+
+
+
+#themeButton {
+    position: fixed;
+    bottom: 140px; /* Positioned above the music button */
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#themeButton:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+}
+
+/* Show the button when scrolling down */
+#backToTop.show {
+    opacity: 1;
+}
+
+/* Responsive adjustments for mode.css */
+@media (max-width: 768px) {
+    #themeButton {
+        bottom: 100px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    #backToTop {
+        bottom: 60px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
