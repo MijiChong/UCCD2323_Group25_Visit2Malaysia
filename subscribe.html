@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <title>Subscription Form</title>
+    <link rel="stylesheet" href="CSS/subscribe.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="CSS/mode.css">
+    <link rel="stylesheet" href="CSS/menuFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="VM.ico">
+
+
+    <style>
+        body {
+          font-size: 30px;
+          font-family: 'Arvo', Georgia, 'Times New Roman', Times, serif;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+        }
+    </style>
+
+<script>
+  function setCookie(cname, cvalue, extime) {
+      const d = new Date();
+      d.setTime(d.getTime() + (extime * 24 * 60 * 60 * 1000)); // Set expiration time
+      let expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function storeCookie(event) {
+      event.preventDefault();
+      let username = document.getElementById("username").value;
+      let email = document.getElementById("email").value;
+      let pnumber = document.getElementById("pnumber").value;
+
+      if (username !== "" && email !== "" && pnumber !== "") {
+          // Set cookies with a 60-minute expiration time
+          setCookie("username", username, 30);
+          setCookie("email", email, 30);
+          setCookie("pnumber", pnumber, 30);
+          setCookie("stillExistCookies", "true", 30);
+
+          window.location.href = "FirstPage.html"; 
+      } else {
+          alert("Please fill in all the fields.");
+      }
+  }
+
+  window.onload = function() {
+      document.getElementById("subscriptionForm").onsubmit = storeCookie;
+  };
+</script>
+</head>
+<body>
+    <nav>
+        <h1 class="malaysia">
+          Visit<span class="two">2</span>Malaysia
+        </h1>
+        <ul class="nav-links">
+          <li class="dropdown">
+            <a href="FirstPage.html" class="dropbtn">Home</a>
+            <div class="dropdown-content">
+              <a href="TripPlanner.html">Trip planner</a>
+              <a href="subscribe.html">Subscribe Now</a>
+            </div>
+          </li>
+      
+          <li class="dropdown">
+            <a href="Cusine.html" class="dropbtn">Cuisine</a>
+            <div class="dropdown-content">
+              <a href="malay.html">Malay</a>
+              <a href="chinese.html">Chinese</a>
+              <a href="indian.html">Indian</a>
+              <a href="others.html">Others</a>
+            </div>
+          </li>
+    
+          <li class="dropdown">
+            <a href="culturemp.html" class="dropbtn">Cultural</a>
+            <div class="dropdown-content">
+              <a href="festival.html">Festival</a>
+              <a href="tradition.html">Traditional</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="Travel.html" class="dropbtn">Travel</a>
+            <div class="dropdown-content">
+              <a href="city.html">City</a>
+              <a href="nature.html">Nature</a>
+            </div>
+          </li>
+          
+        </ul>
+        <div class="topnav">
+          <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </nav>
+      <div class="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </nav>
+    
+    
+    <div class="row form-image">
+      <div class="col-4">
+      </div>
+      <div class="col4">
+          <div class="wrapper form-background">
+              <form id="subscriptionForm" action="">
+                  <h2>Subscription</h2>
+                  <div class="input-box">
+                      <input type="text" id="username" placeholder="Username" required>
+                      <i class='bx bxs-user' ></i>
+                  </div>
+      
+                  <div class="input-box">
+                      <input type="text" id="email" placeholder="E-mail" required>
+                      <i class='bx bxs-envelope' ></i>
+                  </div>
+      
+                  <div class="input-box">
+                      <input type="text" id="pnumber" placeholder="Phone Number" required>
+                      <i class='bx bxs-phone' ></i>
+                  </div>
+      
+                  <button type="submit" class="btn">Submit</button>
+              </form>
+          </div>
+      </div>
+      <div class="col-4">
+      </div>
+  </div>
+    <button id="themeButton" class="btn btn-secondary">
+        <i class="fas fa-sun"></i>
+      </button>
+      <script src="script/mode.js"></script>
+
+    <footer class="footer">
+        <div class="contact">
+            <p class="footer1">Contact us: <a href="VisitMalaysia_Info@visit.com.my">VisitMalaysia_Info@visit.com.my</a></p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            <p >&copy; Visit2Malaysia 2024. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>

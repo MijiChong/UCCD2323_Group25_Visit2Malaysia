@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/menuFooter.css">
+    <link rel="stylesheet" href="CSS/FIrstPage.css">
+    <link rel="icon" type="image/x-icon" href="VM.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/mode.css">
+    <link rel="stylesheet" href="CSS/popup.css">
+    <title>Visit2Malaysia 2024</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  body{
+    font-size: 30px;
+    font-family:'Arvo', Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<script>
+  function getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+          let c = ca[i].trim();
+          if (c.indexOf(name) === 0) {
+              return c.substring(name.length, c.length);
+          }
+      }
+      return "";
+  }
+
+  function checkCookie() {
+      let username = getCookie("username");
+      let stillExistCookies = getCookie("stillExistCookies");
+      if (username != "" || stillExistCookies === "true") {
+          alert("Welcome back, " + username + "!");
+      }
+      
+  }
+
+  window.onload = function() {
+      checkCookie();
+  };
+</script>
+
+<body>
+  <nav>
+    <h1 class="malaysia">
+      Visit<span class="two">2</span>Malaysia
+    </h1>
+    <div class="topnav">
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="FirstPage.html" class="dropbtn">Home</a>
+        <div class="dropdown-content">
+          <a href="TripPlanner.html">Trip planner</a>
+          <a href="subscribe.html">Subscribe Now</a>
+        </div>
+      </li>
+  
+      <li class="dropdown">
+        <a href="Cusine.html" class="dropbtn">Cuisine</a>
+        <div class="dropdown-content">
+          <a href="malay.html">Malay</a>
+          <a href="chinese.html">Chinese</a>
+          <a href="indian.html">Indian</a>
+          <a href="others.html">Others</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="culturemp.html" class="dropbtn">Cultural</a>
+        <div class="dropdown-content">
+          <a href="festival.html">Festival</a>
+          <a href="tradition.html">Traditional</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="Travel.html" class="dropbtn">Travel</a>
+        <div class="dropdown-content">
+          <a href="city.html">City</a>
+          <a href="nature.html">Nature</a>
+        </div>
+      </li>
+    </ul>
+</nav>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="images/malaysia.jpg" style="width:100%">
+      <div class="caption">MALAYSIA</div>
+  </div>
+  
+  <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="images/races.jpg" style="width:100%">
+      <div class="caption">RACES</div>
+  </div>
+  
+  <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="images/island.jpg" style="width:100%">
+      <div class="caption">ISLAND</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="images/nature.jpg" style="width:100%">
+    <div class="caption">NATURE</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="images/wildlife.jpg" style="width:100%">
+  <div class="caption">WILDLIFE</div>
+</div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+</div> 
+
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content"  style="background-color: rgb(165, 165, 165)">
+            <h2 style="color: white;">Subscription</h2>
+            <p style="color: white;">Do you want to subscribe to our website?</p>
+            <div class="popup-buttons">
+                <button onclick="acceptAction()">Accept</button>
+                <button onclick="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+<div class="intro fade-in" ><h1>WELCOME TO MALAYSIA</h1>
+  <p>Apa khabar to all fellows around the world, Malaysia is a Southeast Asian country known for its rich cultural diversity, vibrant cities, and stunning natural landscapes. 
+    The country's natural beauty is equally captivating, from the pristine beaches  to the lush rainforests, home to diverse wildlife and majestic mountains. 
+    Malaysia's culinary scene is a flavorful blend of Malay, Chinese, and Indian influences, making it a paradise for food lovers. With its friendly people, modern amenities, and 
+    a blend of tradition and modernity, Malaysia offers a unique and enriching travel experience.</p></div>
+
+
+ <div class="video-container" style="background-color: white;">
+  <video width="800" height="315" controls>
+      <source src="videos/Intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="about fade-in" style="background-image: url('images/flag.jpg'); background-size: cover; background-position: center;">
+  <div id="about">
+    <h1 style="color: black;">About Us</h1>
+    <p style="color: black;">Welcome to Visit2Malaysia, your ultimate guide to exploring the rich cultural tapestry and breathtaking landscapes of Malaysia. We are passionate 
+      travelers and dedicated experts who have traversed every corner of this diverse nation. We aim to inspire your journey with detailed travel guides, insightful tips, 
+      and personalized recommendations. Whether you're an adventure seeker, a culture enthusiast, or a food lover, our curated content ensures that your Malaysian adventure is 
+      unforgettable. Join us as we explore the stunning landscapes, delve into the rich history, and savor the delectable cuisine of Malaysia.
+       Let Visit2Malaysia be your trusted companion in uncovering the wonders of this incredible country. Your adventure begins here!</p>
+  </div>
+</div>
+            
+<div class="mivi fade-in">
+  <div id="mivi">
+    <h1>Mission & Vision</h1>
+    <p>Our <b>Mission</b> at Visit2Malaysia is to inspire and guide travelers to explore and experience the rich cultural diversity, stunning natural landscapes, 
+      and vibrant cities of Malaysia. We aim to provide comprehensive, reliable,and up-to-date travel information, tips, and recommendations to ensure every journey is 
+      memorable and enriching.<br> <br>
+      Our <b>Vision</b> is to become the leading travel resource for Malaysia, celebrated for our deep local insights, exceptional travel guides, and commitment to promoting sustainable
+       and responsible tourism. We strive to connect people with the beauty and culture of Malaysia, fostering a global community of informed and inspired travelers.</p>
+  </div>
+  </div>
+              
+  <button id="themeButton" class="btn btn-secondary">
+    <i class="fas fa-sun"></i>
+  </button>
+  <button id="backToTop" class="btn btn-primary">
+    <i class="fas fa-chevron-up"></i>
+</button>
+<script src="script/main.js"></script>
+<script src="script/mode.js"></script>
+
+
+</body>
+<footer class="footer">
+  <div class="contact">
+      <p class="footer1">Contact us: <a href="VisitMalaysia_Info@visit.com.my">VisitMalaysia_Info@visit.com.my</a></p>
+  </div>
+  <div class="social-media">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="copyright">
+      <p >&copy; Visit2Malaysia 2024. All rights reserved.</p>
+  </div>
+</footer>
+</html>
