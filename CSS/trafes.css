@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Arvo', Georgia, 'Times New Roman', Times, serif;
+}
+
+
+body nav.custom-nav {
+    background-color: #010066;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Use more specific selectors for nav links */
+body nav.custom-nav .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 16px;
+}
+
+body nav.custom-nav .nav-links li {
+    position: relative;
+    padding: 0 15px;
+}
+
+body nav.custom-nav .nav-links li a:hover {
+    color: #FFFF00 !important; /* Change the color to yellow on hover */
+}
+
+
+/* Footer styles */
+body footer.custom-footer {
+    background-color: #010066 !important;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff !important;
+}
+
+body footer.custom-footer .social-media {
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+body footer.custom-footer .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff !important;
+}
+
+body footer.custom-footer .social-media a:hover {
+    color: #FFFF00 !important;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Initial state - hide and slide from bottom */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When the section is in view */
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.section-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 400px; 
+    font-weight: bolder;
+    color: #363030;
+    margin-top: 2rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.container {
+    padding-top: 50px; /* Add padding to avoid overlap with fixed nav */
+    padding-left: 15px; /* Add some padding inside the container */
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-top: 80px; /* Ensures content is not overlapped by the nav bar */
+}
+
+
+.container h2 {
+    font-family:'Arvo', Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.container p {
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #666;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trafes-section {
+    background: #edeebb;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trafes-section:hover {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px; 
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    max-height: 400px; 
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.card-title {
+    margin-top: auto;
+    font-family:'Arvo', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #ffffff; 
+    padding: 1rem;
+    transform: translateY(100%); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1; 
+}
+
+.card.active .card-description {
+    transform: translateY(0); /* Slides into view */
+}
+
+#musicButton {
+    position: fixed;
+    bottom: 80px; 
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#musicButton:hover {
+    background-color: #0056b3;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+}
+
+/* Show the button when scrolling down */
+#backToTop.show {
+    opacity: 1;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for trafes.css */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 120px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .card {
+        height: auto;
+    }
+    .card-img-top {
+        max-height: 200px;
+    }
+}

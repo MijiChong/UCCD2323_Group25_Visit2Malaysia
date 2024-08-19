@@ -1,0 +1,221 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    font-family:'Arvo', Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body nav.custom-nav {
+    background-color: #010066;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Use more specific selectors for nav links */
+body nav.custom-nav .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 16px;
+}
+
+body nav.custom-nav .nav-links li {
+    position: relative;
+    padding: 0 15px;
+}
+
+body nav.custom-nav .nav-links li a:hover {
+    color: #FFFF00 !important; /* Change the color to yellow on hover */
+}
+
+
+/* Footer styles */
+body footer.custom-footer {
+    background-color: #010066 !important;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff !important;
+}
+
+body footer.custom-footer .social-media {
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+body footer.custom-footer .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff !important;
+}
+
+body footer.custom-footer .social-media a:hover {
+    color: #FFFF00 !important;
+}
+
+/* Video background styling */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding-top: 120px; /* Increase this value to move content down */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Change this from center to flex-start */
+}
+
+.content header {
+    margin-bottom: 1rem; /* Reduce this value if needed */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem; /* Reduce padding if needed */
+    border-radius: 10px;
+    margin-top: 1rem; /* Add some top margin */
+}
+.content header h1 {
+    font-family:'Arvo', Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: 650; /* Bold weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.content header h1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #f7971e; /* Change color on hover */
+}
+
+.content h2 {
+    font-family:'Arvo', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem; /* Reduce from 2rem if needed */
+    margin-bottom: 1.5rem;
+    font-weight: 350; /* Normal weight */
+    color: #f0f0f0; /* Lighter color for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.content h2:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+    color: #f7971e; /* Change color on hover */
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #a11414; /* Primary color */
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2a499e; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.btn-secondary {
+    background-color: #556270; /* Secondary color */
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #1f2e52; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.btn {
+    margin: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Button animation styles */
+@keyframes fadeInScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.btn-animated {
+    animation: fadeInScaleUp 0.5s ease-in-out;
+}
+
+/* Make sure hidden class also hides the button properly */
+.hidden {
+    display: none;
+}
+
+
+/* Responsive design */
+@media (max-height: 600px) {
+    .content {
+        padding-top: 100px; /* Further reduce top padding for shorter screens */
+    }
+
+    .content header h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}

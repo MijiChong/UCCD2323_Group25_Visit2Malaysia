@@ -1,0 +1,177 @@
+/* Common Styles */
+div.menuBar {
+    background-color: #010066;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box; 
+}
+
+h1.malaysia {
+    color: #ffffff;
+}
+
+span.two {
+    color: #FFFF00;
+}
+
+/* Navigation */
+nav {
+    background-color: #010066;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box; 
+    z-index: 1000;
+    top: 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 16px;
+}
+
+.nav-links li {
+    position: relative;
+    padding: 0 15px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #010066;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.icon {
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.topnav {
+    display: none;
+}
+
+/* Hover effects for navigation links */
+.nav-links li a:hover {
+    color: #FFFF00;
+}
+
+/* Hover effects for dropdown items */
+.dropdown-content a:hover {
+    background-color: #010066;
+}
+
+/* Tablet View - Medium Screens */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        flex: 1 1 50%; /* Two items per row */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav {
+        height: auto;
+        padding: 10px 5%;
+        flex-wrap: wrap;
+    }
+
+    nav h1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile View - Small Screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        flex: 1 1 50%; /* Two items per row */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav {
+        height: auto;
+        padding: 10px 5%;
+        flex-wrap: wrap;
+    }
+
+    nav h1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        flex: 1 1 100%; /* One item per row */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav {
+        height: auto;
+        padding: 10px 5%;
+        flex-wrap: wrap;
+    }
+
+    nav h1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+}

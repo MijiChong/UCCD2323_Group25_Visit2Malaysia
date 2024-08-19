@@ -1,0 +1,97 @@
+/* General Styles for Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333; /* Background color of the header */
+    color: #fff; /* Text color */
+    padding: 1rem; /* Padding around the header */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-logo {
+    font-size: 2rem; /* Logo font size */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Space below the logo */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0 1rem; /* Space between menu items */
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem; /* Menu item font size */
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #555; /* Hover background color */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hamburger.active {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-logo {
+        font-size: 1.5rem; /* Smaller logo font size */
+        margin-bottom: 0.5rem; /* Reduced space below the logo */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem; /* Larger font size for easier clicking */
+        padding: 1rem;
+        border-radius: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        font-size: 1.2rem; /* Even smaller logo font size */
+    }
+
+    .nav-menu a {
+        font-size: 1rem; /* Smaller font size for very small screens */
+    }
+}
